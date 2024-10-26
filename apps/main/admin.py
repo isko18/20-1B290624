@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.main.models import Main, Artist, Event
+from apps.main.models import Main, Artist, Event, Contact
 # Register your models here.
 
 @admin.register(Main)
@@ -14,3 +14,6 @@ class ArtistAdmin(admin.ModelAdmin):
 class EventAdmin(admin.ModelAdmin):
     fields = ['title', 'description', 'image', 'date']
     # readonly_fields = ['date']
+    
+    
+admin.site.register(Contact)
